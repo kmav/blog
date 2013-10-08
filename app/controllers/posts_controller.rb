@@ -10,6 +10,10 @@ class PostsController < ApplicationController
     redirect_to @post
     #  render text: params[:post].inspect
   end
+  
+  def show
+    @post = Post.find(params[:id])
+  end
  
 private
   def post_params
